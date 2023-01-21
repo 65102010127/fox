@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<style>
+    a:visited{
+        color: rgb(55, 255, 88);
+    }
+    a:hover{
+        color: rgb(0, 217, 255);
+    }
+    a{
+        text-decoration: none;
+    }
+    body{
+        text-align: center;
+        font-family: 'Fredoka One', cursive;
+        background-image: url(https://wallpaperaccess.com/full/6524531.png);
+    }
+    .canvas{
+        text-align: center;
+    }
+</style>
+<body>
+    <h1>
+        <div class="link">
+            <a href="index.html">Home</a> |
+            <a href="lab2-1.html">Video</a> |
+            <a href="lab2-2.html">Canvas</a> |
+            <a href="lab2-3.html">Form</a>
+        </div>
+    </h1>
+    <div class="canvas">
+        <h1><canvas id="myCanvas" width="500" height="150" style="border:3px solid #303030;"></canvas></h1>
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.font = "43px Fredoka One";
+            var gradient = ctx.createLinearGradient(0, 0,c.width,0)
+            gradient.addColorStop("0", "#0277bd");
+            gradient.addColorStop("0.5", "#02f8bd");
+            gradient.addColorStop("1", "#66f100");
+            ctx.strokeStyle = gradient;
+            ctx.strokeText("Sirasit Pongsupasuk",40,60);
+            ctx.strokeText("fox",215,120);
+        </script>
+    </div>
+</body>
+</html>
